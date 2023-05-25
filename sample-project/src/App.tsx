@@ -1,10 +1,11 @@
-import './App.css'
-import Message from './assets/Component/Message'
+import "./App.css";
+import Message from "./assets/Component/Message";
 
 function App() {
   return (
-    <div><Message/></div>
+    <div>
+      <Message />
+    </div>
   );
 }
-
-export default App
+export default App;

@@ -1,9 +1,8 @@
-import { Component } from "react"
+import { Component } from "react";
 
 function Message() {
-    const name ="Aman"
-    if(name) return <h1>Hello {name}</h1>
-    return <h1>Hello World</h1>
+  const name = "Aman";
+  if (name) return <h1>Hello {name}</h1>;
+  return <h1>Hello World</h1>;
 }
-
 export default Message;
