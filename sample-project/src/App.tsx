@@ -3,10 +3,11 @@ import ListGroup from "./assets/Component/ListGroup";
 import Message from "./assets/Component/Message";
 
 function App() {
+  let cityList = ["Kolkata", "Delhi", "Mumbai", "Bangalore", "Chennai"];
   return (
     <div>
-      <Message />
-      <ListGroup />
+      <Message text="Hello My First Property"></Message>
+      <ListGroup listHeading="Technologies Available" listItems={cityList} />
     </div>
   );
 }

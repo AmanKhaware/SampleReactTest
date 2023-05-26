@@ -1,13 +1,17 @@
+interface Props {
+  listHeading: string;
+  listItems: string[];
+}
 import { MouseEvent, useState } from "react";
-function ListGroup() {
-  let items = ["Kolkata", "Delhi", "Mumbai", "Bangalore", "Chennai"];
+function ListGroup(props: Props) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   return (
     <>
       <h1>Dynamic List</h1>
-      {items.length === 0 && <p>No Items is found in the list</p>}
+      {props.listItems.length === 0 && <p>No other location are avaiable</p>}
+
       <ul className="list-group">
-        {items.map((x, index) => (
+        {props.listItems.map((item, index) => (
           <li
             className={
               selectedIndex === index
@@ -17,15 +21,45 @@ function ListGroup() {
             key={index}
             onClick={() => setSelectedIndex(index)}
           >
-            {x}
+            {item}
           </li>
         ))}
       </ul>
     </>
   );
 }
+
 export default ListGroup;
 
+// import { MouseEvent, useState } from "react";
+// function ListGroup() {
+//   let items = ["Kolkata", "Delhi", "Mumbai", "Bangalore", "Chennai"];
+//   const [selectedIndex, setSelectedIndex] = useState(-1);
+//   return (
+//     <>
+//       <h1>Dynamic List</h1>
+//       {items.length === 0 && <p>No Items is found in the list</p>}
+//       <ul className="list-group">
+//         {items.map((x, index) => (
+//           <li
+//             className={
+//               selectedIndex === index
+//                 ? "list-group-item active"
+//                 : "list-group-item"
+//             }
+//             key={index}
+//             onClick={() => setSelectedIndex(index)}
+//           >
+//             {x}
+//           </li>
+//         ))}
+//       </ul>
+//     </>
+//   );
+// }
+// export default ListGroup;
+
+// ------------------------------------------------------------------------------------------------------------------------------
 // function ListGroup(){
 //     return(
 //         <ul className="list-group">
