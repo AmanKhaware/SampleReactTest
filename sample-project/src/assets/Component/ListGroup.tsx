@@ -7,7 +7,7 @@ function ListGroup(props: Props) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   return (
     <>
-      <h1>Dynamic List</h1>
+      <h1>{props.listHeading}</h1>
       {props.listItems.length === 0 && <p>No other location are avaiable</p>}
 
       <ul className="list-group">
